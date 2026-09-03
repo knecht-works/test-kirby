@@ -1,0 +1,9 @@
+Title: Home
+
+----
+
+Intro: A small demo page, built with the Knecht Styleguide Kit and rendered by Kirby.
+
+----
+
+Uuid: adbxmv8pfpzl5j0i

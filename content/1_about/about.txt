@@ -1,0 +1,15 @@
+Title: About
+
+----
+
+Text:
+
+This is the second page of the **test-kirby** fixture. It exists so an end-to-end run has an internal link to follow and a second template to render.
+
+- Content is file-based, no database container is needed.
+- The Panel lives at `/panel`.
+- Kirby runs unlicensed in local development.
+
+----
+
+Uuid: fdy2heibkqrccwfs

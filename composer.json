@@ -1,0 +1,19 @@
+{
+    "name": "knecht-works/test-kirby",
+    "description": "A DDEV-based Kirby CMS project used as an e2e test fixture for Knecht.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+        "getkirby/cms": "^5.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        },
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "kirby-cms-path": false
+    }
+}

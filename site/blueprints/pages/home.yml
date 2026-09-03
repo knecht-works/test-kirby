@@ -1,0 +1,6 @@
+title: Home
+
+fields:
+  intro:
+    type: textarea
+    size: small

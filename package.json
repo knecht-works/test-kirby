@@ -1,0 +1,7 @@
+{
+    "name": "test-kirby",
+    "private": true,
+    "scripts": {
+        "build": "echo build ok"
+    }
+}
