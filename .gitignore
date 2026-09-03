@@ -1,6 +1,7 @@
-# Dependencies
+# Dependencies (kirby-vite is a Kirby plugin, installed by composer into site/plugins)
 /vendor
 /node_modules
+/site/plugins/kirby-vite
 
 # Kirby generated files
 /public/media/*
@@ -11,6 +12,10 @@
 !/storage/sessions/index.html
 /site/config/.license
 .lock
+
+# Vite build output and the dev-mode marker written by vite-plugin-kirby
+/public/dist
+/.dev
 
 # Panel accounts are intentionally tracked (storage/accounts) so Knecht can log in from a bare clone.
 

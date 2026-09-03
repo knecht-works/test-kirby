@@ -38,6 +38,10 @@ snippet('header');
           <dd><?= esc((string) $value) ?></dd>
         </div>
         <?php endforeach; ?>
+        <div class="kit-dl-row">
+          <dt>Vite bundle</dt>
+          <dd data-vite-status="pending">not loaded</dd>
+        </div>
       </dl>
     </section>
 

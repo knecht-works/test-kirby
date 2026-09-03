@@ -14,7 +14,7 @@
 
 </div>
 
-A [DDEV](https://ddev.com)-based Kirby 5 project used as an end-to-end test fixture for [Knecht](https://knecht.works). Kirby is file-based, so the project runs without a database container (`omit_containers: [db]`) and uses the public-folder setup: only `public/` is served, while `content/`, `site/`, `storage/` and `vendor/` live above the docroot. It ships a home page built with the Knecht Styleguide Kit, a second page to click through to, and a committed Panel account, so Knecht can boot the environment from a bare clone, hit the site, and log into the Panel.
+A [DDEV](https://ddev.com)-based Kirby 5 project used as an end-to-end test fixture for [Knecht](https://knecht.works). Kirby is file-based, so the project runs without a database container (`omit_containers: [db]`) and uses the public-folder setup: only `public/` is served, while `content/`, `site/`, `storage/` and `vendor/` live above the docroot. It ships a home page built with the Knecht Styleguide Kit, a second page to click through to, and a committed Panel account, so Knecht can boot the environment from a bare clone, hit the site, and log into the Panel. Front-end assets (`src/`) are bundled with [Vite](https://vitejs.dev) via [kirby-vite](https://github.com/arnoson/kirby-vite): the "Vite bundle" row on the home page flips from "not loaded" to "loaded" once the built script runs.
 
 ## Setup
 
@@ -22,7 +22,9 @@ Requires [DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-install
 
 ```bash
 ddev start                      # boot the containers
-ddev composer install           # install Kirby into vendor/
+ddev composer install           # install Kirby and kirby-vite into vendor/
+ddev npm install
+ddev npm run build              # build src/ into public/dist, or `ddev npm run dev` for the Vite dev server
 ```
 
 Kirby runs unlicensed in local development (it is licensed separately from this MIT-licensed fixture; see [getkirby.com/license](https://getkirby.com/license)). The Panel account is tracked in `storage/accounts/` on purpose:

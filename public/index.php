@@ -15,6 +15,9 @@ require $base . '/vendor/autoload.php';
 
 $kirby = new Kirby([
     'roots' => [
+        // The project root above the docroot; kirby-vite resolves the Vite
+        // outDir (public/dist) and its .dev marker against it.
+        'base'     => $base,
         'index'    => __DIR__,
         'content'  => $base . '/content',
         'site'     => $base . '/site',
