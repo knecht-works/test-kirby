@@ -28,6 +28,10 @@ export default ({ mode }) => ({
     host: '0.0.0.0',
     port: 5173,
     strictPort: true,
+    // vite-plugin-kirby writes this origin into the `.dev` marker that the
+    // PHP side reads; without it the file gets http://0.0.0.0:5173. Under
+    // Knecht the browser reaches the dev server on its own origin.
+    origin: process.env.KNECHT_DEV_SERVER_URL,
     allowedHosts: true,
     cors: {
       origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(localhost|\.local|\.test|\.site)(?::\d+)?$/,
